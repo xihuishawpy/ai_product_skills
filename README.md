@@ -1,4 +1,4 @@
-# AI Product Skills
+﻿# AI Product Skills
 
 一组面向 AI 产品经理和业务同事的 Codex skills，用来把常见 AI 产品工作流标准化。
 
@@ -10,11 +10,11 @@
 
 ```text
 skills/
-├── ai-scenario-assessment/
-├── ai-prd/
-├── ai-mvp-planning/
-├── ai-metrics-design/
-└── ai-acceptance-check/
+├── assessing-ai-scenarios/
+├── writing-ai-prds/
+├── planning-ai-mvps/
+├── designing-ai-metrics/
+└── checking-ai-acceptance/
 ```
 
 根目录的 `SKILL.md` 是早期的“AI 场景识别”完整原稿，适合参考和继续迭代，不是推荐给业务同事安装的入口。
@@ -23,11 +23,11 @@ skills/
 
 | Skill | 用途 |
 |---|---|
-| `ai-scenario-assessment` | 判断业务场景是否适合 AI、是否值得立项、该用 AI 还是非 AI |
-| `ai-prd` | 把 AI 产品想法、会议纪要或业务需求整理成 PRD |
-| `ai-mvp-planning` | 把复杂 AI 需求收敛成可试点 MVP，明确先做和暂不做 |
-| `ai-metrics-design` | 设计 AI 产品指标、评测口径、验收阈值和护栏指标 |
-| `ai-acceptance-check` | 检查 AI 产品方案、PRD、MVP 或上线计划的验收缺口 |
+| `assessing-ai-scenarios` | 判断业务场景是否适合 AI、是否值得立项、该用 AI 还是非 AI |
+| `writing-ai-prds` | 把 AI 产品想法、会议纪要或业务需求整理成 PRD |
+| `planning-ai-mvps` | 把复杂 AI 需求收敛成可试点 MVP，明确先做和暂不做 |
+| `designing-ai-metrics` | 设计 AI 产品指标、评测口径、验收阈值和护栏指标 |
+| `checking-ai-acceptance` | 检查 AI 产品方案、PRD、MVP 或上线计划的验收缺口 |
 
 ## 安装
 
@@ -52,7 +52,7 @@ bash install.sh
 
 安装后重启 Codex 或新开会话。
 
-安装脚本会把 `skills/ai-*` 复制到你的 Codex skills 目录：
+安装脚本会把 5 个正式 skill 复制到你的 Codex skills 目录：
 
 - Windows: `%USERPROFILE%\.codex\skills`
 - macOS / Linux: `~/.codex/skills`
@@ -66,14 +66,22 @@ Windows PowerShell:
 
 ```powershell
 mkdir $env:USERPROFILE\.codex\skills -Force
-Copy-Item .\skills\ai-* $env:USERPROFILE\.codex\skills -Recurse -Force
+Copy-Item .\skills\assessing-ai-scenarios $env:USERPROFILE\.codex\skills -Recurse -Force
+Copy-Item .\skills\writing-ai-prds $env:USERPROFILE\.codex\skills -Recurse -Force
+Copy-Item .\skills\planning-ai-mvps $env:USERPROFILE\.codex\skills -Recurse -Force
+Copy-Item .\skills\designing-ai-metrics $env:USERPROFILE\.codex\skills -Recurse -Force
+Copy-Item .\skills\checking-ai-acceptance $env:USERPROFILE\.codex\skills -Recurse -Force
 ```
 
 macOS / Linux:
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -R skills/ai-* ~/.codex/skills/
+cp -R skills/assessing-ai-scenarios ~/.codex/skills/
+cp -R skills/writing-ai-prds ~/.codex/skills/
+cp -R skills/planning-ai-mvps ~/.codex/skills/
+cp -R skills/designing-ai-metrics ~/.codex/skills/
+cp -R skills/checking-ai-acceptance ~/.codex/skills/
 ```
 
 ## 使用
@@ -99,7 +107,7 @@ cp -R skills/ai-* ~/.codex/skills/
 也可以直接点名 skill：
 
 ```text
-用 ai-scenario-assessment 评估这个场景：……
+用 assessing-ai-scenarios 评估这个场景：……
 ```
 
 ## 该问什么

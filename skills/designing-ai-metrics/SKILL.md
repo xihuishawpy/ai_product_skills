@@ -1,5 +1,5 @@
----
-name: ai-metrics-design
+﻿---
+name: designing-ai-metrics
 description: 为 AI 产品、AI 功能、AI 场景或 POC 设计指标体系、评测口径、验收阈值和护栏指标。适用于用户要求“怎么衡量 AI 效果”“设计 AI 指标”“制定评测集和验收标准”“如何证明 AI 项目有效”等问题。
 ---
 

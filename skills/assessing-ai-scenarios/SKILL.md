@@ -1,5 +1,5 @@
----
-name: ai-scenario-assessment
+﻿---
+name: assessing-ai-scenarios
 description: 评估业务场景是否适合 AI 产品化，并输出 AI 与非 AI 解法判断、业务价值量化、落地可行性评估、AI 任务拆分、MVP 范围和场景优先级。适用于用户询问“这个场景适不适合用 AI”“AI 项目是否值得立项”“该用规则还是大模型”“多个 AI 场景先做哪个”等问题。
 ---
 

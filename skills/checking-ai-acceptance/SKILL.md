@@ -1,5 +1,5 @@
----
-name: ai-acceptance-check
+﻿---
+name: checking-ai-acceptance
 description: 检查 AI 产品方案、PRD、MVP 或上线计划是否具备验收条件，识别指标、数据、风险、兜底、合规和上线缺口。适用于用户要求“帮我检查这个 AI 方案”“上线前验收”“PRD 是否完整”“找风险和缺口”等任务。
 ---
 

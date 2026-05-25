@@ -1,5 +1,5 @@
----
-name: ai-mvp-planning
+﻿---
+name: planning-ai-mvps
 description: 将 AI 产品想法、复杂需求或多个功能方向收敛成可试点 MVP，明确先做、暂不做、验证指标、里程碑和上线前条件。适用于用户要求“帮我砍 MVP”“这个 AI 项目第一版做什么”“如何从 POC 到试点”等问题。
 ---
 
