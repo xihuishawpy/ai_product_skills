@@ -2,17 +2,41 @@
 
 一组面向 AI 产品经理和业务同事的 Codex skills，用来把常见 AI 产品工作流标准化。
 
+业务同事安装后，不需要记命令，直接用自然语言提问即可。
+
+## 应该安装什么
+
+请安装 `skills/` 目录下的这些拆分版 skills：
+
+```text
+skills/
+├── ai-scenario-assessment/
+├── ai-prd/
+├── ai-mvp-planning/
+├── ai-metrics-design/
+└── ai-acceptance-check/
+```
+
+根目录的 `SKILL.md` 是早期的“AI 场景识别”完整原稿，适合参考和继续迭代，不是推荐给业务同事安装的入口。
+
 ## 包含的 skills
 
 | Skill | 用途 |
 |---|---|
-| `ai-scenario-assessment` | 判断业务场景是否适合 AI、是否值得立项 |
-| `ai-prd` | 把 AI 产品想法整理成 PRD |
-| `ai-mvp-planning` | 把复杂 AI 需求收敛成可试点 MVP |
-| `ai-metrics-design` | 设计 AI 产品指标、评测口径和验收阈值 |
-| `ai-acceptance-check` | 检查 AI 产品方案、PRD 或上线计划的验收缺口 |
+| `ai-scenario-assessment` | 判断业务场景是否适合 AI、是否值得立项、该用 AI 还是非 AI |
+| `ai-prd` | 把 AI 产品想法、会议纪要或业务需求整理成 PRD |
+| `ai-mvp-planning` | 把复杂 AI 需求收敛成可试点 MVP，明确先做和暂不做 |
+| `ai-metrics-design` | 设计 AI 产品指标、评测口径、验收阈值和护栏指标 |
+| `ai-acceptance-check` | 检查 AI 产品方案、PRD、MVP 或上线计划的验收缺口 |
 
 ## 安装
+
+先克隆仓库：
+
+```bash
+git clone https://github.com/xihuishawpy/ai_product_skills.git
+cd ai_product_skills
+```
 
 Windows PowerShell:
 
@@ -27,6 +51,30 @@ bash install.sh
 ```
 
 安装后重启 Codex 或新开会话。
+
+安装脚本会把 `skills/ai-*` 复制到你的 Codex skills 目录：
+
+- Windows: `%USERPROFILE%\.codex\skills`
+- macOS / Linux: `~/.codex/skills`
+- 如果设置了 `CODEX_HOME`，macOS / Linux 脚本会安装到 `$CODEX_HOME/skills`
+
+## 手动安装
+
+如果不想运行脚本，也可以手动复制。
+
+Windows PowerShell:
+
+```powershell
+mkdir $env:USERPROFILE\.codex\skills -Force
+Copy-Item .\skills\ai-* $env:USERPROFILE\.codex\skills -Recurse -Force
+```
+
+macOS / Linux:
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R skills/ai-* ~/.codex/skills/
+```
 
 ## 使用
 
@@ -54,6 +102,27 @@ bash install.sh
 用 ai-scenario-assessment 评估这个场景：……
 ```
 
+## 该问什么
+
+| 你想做什么 | 可以这样问 |
+|---|---|
+| 判断 AI 项目值不值得做 | `这个场景适不适合用 AI？值不值得立项？` |
+| 写 AI 产品 PRD | `把这个需求整理成 AI 产品 PRD。` |
+| 砍 MVP 范围 | `第一版 MVP 应该做什么，不做什么？` |
+| 设计指标 | `这个 AI 功能怎么衡量效果，怎么验收？` |
+| 检查方案风险 | `帮我检查这个 AI 方案上线前还有什么缺口。` |
+
 ## 路由说明
 
 看 `skills/RESOLVER.md`。
+
+## 目录说明
+
+```text
+README.md                 给使用者看的安装和使用说明
+install.ps1               Windows 安装脚本
+install.sh                macOS / Linux 安装脚本
+SKILL.md                  AI 场景识别原始完整版
+skills/                   推荐安装的拆分版 skills
+skills/RESOLVER.md        选择哪个 skill 的路由说明
+```
